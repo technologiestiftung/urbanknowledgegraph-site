@@ -1,0 +1,8 @@
+{
+  "name": "Berlin Urban Knowledge",
+  "short_name": "Urban Knowledge",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fff",
+  "description": "Berlin data and datasources"
+}

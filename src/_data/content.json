@@ -1,0 +1,187 @@
+{
+  "meta": {
+    "title": {
+      "en": "Berlin Urban Knowledge",
+      "de": "Berlin Urban Knowledge"
+    },
+    "metatagtitle": {
+      "en": "",
+      "de": "Berlin Urban Knowledge"
+    },
+    "description": {
+      "en": "",
+      "de": ""
+    },
+    "footer": {
+      "tagline": {
+        "en": "",
+        "de": ""
+      },
+      "byline": {
+        "en": "A project by",
+        "de": "Ein Projekt der"
+      },
+      "supportline": {
+        "en": "Supported by",
+        "de": "Gefördert durch"
+      }
+    }
+  },
+  "section-hero": {
+    "title": {
+      "en": ["Hack", "the Crisis", "<span>Berlin/span>"],
+      "de": ["Berlin", "<span>Urban</span>", "<span>Knowledge</span>"]
+    },
+    "text": {
+      "en": [
+       
+      ],
+      "de": [
+        "Sehr kurzes Intro. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est em ipsum dolor sit amet. <!-- <blockquote></blockquote> -->"
+      ]
+    }
+  },
+  "section-introduction": {
+    "id": "introduction",
+    "title": {
+      "en": "Urban Knowledge",
+      "de": "Urban Knowledge"
+    },
+    "sub-section-idea": {
+      "title": {
+        "en": "",
+        "de": "Urbane Daten"
+      },
+      "text": {
+        "en": [
+        ],
+        "de": [
+          "Wozu urbane Daten? Wozu daten vernetzen? Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est em ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est em ipsum dolor sit amet."
+        ]
+      },
+      "list": {
+        "en": [
+          ],
+        "de": [
+          
+        ]
+      }
+    },
+    "sub-section-graph": {
+      "title": {
+        "en": "",
+        "de": "Der Knowledge Graph"
+      },
+      "text": {
+        "en": [
+        ],
+        "de": [
+          "Was ist ein Knowledge Graph?Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est em ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est em ipsum dolor sit amet."
+        ]
+      },
+      "list": {
+        "en": [
+          ],
+        "de": [
+          
+        ]
+      }
+    }
+  },
+
+  "section-submit-projects": {
+    "id": "submit-projects",
+    "title": {
+      "en": "",
+      "de": "Berliner Datenportale"
+    },
+    "portal": {
+      "en": [""],
+      "de": ["Gesundheits- und Sozialinformationssystem"]
+    },
+    "text": {
+      "en": [""],
+      "de": ["Kurzbeschreibung des Portals. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est em ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur sadipscing elitr.."]
+    },
+    "buttons": [
+      {
+        "text": {
+          "en": "",
+          "de": "Zum GSI",
+          "url": "http://www.gsi-berlin.info"
+        }
+      }
+    ],
+    "portal2": {
+      "en": [""],
+      "de": ["Amt für Statistik Berlin-Brandenburg"]
+    },
+    "text2": {
+      "en": [""],
+      "de": ["Kurzbeschreibung des Portals. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est em ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur sadipscing elitr.."]
+    },
+    "buttons2": [
+      {
+        "text": {
+          "en": "",
+          "de": "Zum Datenportal des AfS",
+          "url": "https://www.statistik-berlin-brandenburg.de"
+        }
+      }
+    ],
+    "portal3": {
+      "en": [""],
+      "de": ["Geodatenkatalog"]
+    },
+    "text3": {
+      "en": [""],
+      "de": ["Kurzbeschreibung des Portals. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est em ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur sadipscing elitr.."]
+    },
+    "buttons3": [
+      {
+        "text": {
+          "en": "",
+          "de": "Zum FIS-Broker",
+          "url": "https://fbinter.stadt-berlin.de/fb/index.jsp"
+        }
+      }
+    ],
+    "portal4": {
+      "en": [""],
+      "de": ["Berlin Open Data"]
+    },
+    "text4": {
+      "en": [""],
+      "de": ["Kurzbeschreibung des Portals. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est em ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur sadipscing elitr.."]
+    },
+    "buttons4": [
+      {
+        "text": {
+          "en": "",
+          "de": "Zum Metadaten-Portal",
+          "url": "https://daten.berlin.de"
+        }
+      }
+    ]
+  },
+  "section-prototyp": {
+    "id": "prototyp",
+    "title": {
+      "en": "",
+      "de": "Daten vernetzen - Prototyp"
+    },
+    "text": {
+      "en": [""],
+      "de": ["Beschreibung Masterportal. Beschreibung (thematischer) Prototyp.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est em ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur sadipscing elitr.orem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam er."]
+    },
+    "buttons": [
+      {
+        "text": {
+          "en": "",
+          "de": "Zum Masterportal-Prototypen",
+          "url": ""
+        }
+      }
+    ]
+  }
+}

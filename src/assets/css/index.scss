@@ -1,0 +1,456 @@
+@import "./partials/fonts.scss";
+@import "./partials/navbar-burger-toggle.scss"; // remove me
+
+@import "~bulma/sass/utilities/initial-variables";
+@import "~bulma/sass/utilities/functions";
+$primary: #2f30a6;
+$text: #000;
+$radius-small: 0px;
+$radius: 0px;
+$radius-large: 0px;
+$radius-rounded: 0px;
+
+$size-0: 8rem;
+$size-1: 4rem;
+$size-2: 3rem;
+$size-3: 2rem;
+$size-4: 1.5rem;
+$size-5: 1rem;
+$size-6: 0.5rem;
+$size-7: 0.25rem;
+$size-8: 0.125rem;
+
+$heading-line-height: 0.9;
+
+@import "~bulma/bulma.sass";
+
+@mixin primarySection {
+  background-color: $primary;
+  color: white;
+  h1,
+  h2,
+  h3 {
+    color: white;
+  }
+}
+
+body {
+  font-family: "National Regular";
+}
+
+a,
+a:hover {
+  color: $primary;
+}
+
+.button.is-primary {
+  font-size: $size-5;
+  color: white;
+  background-color: $text;
+
+  &:hover {
+    background-color: $text;
+  }
+}
+
+.hero-body {
+  padding-top: 0rem !important;
+}
+
+.section#nav {
+  padding: 1.5rem;
+}
+
+footer .content p:not(:last-child) {
+  margin-bottom: 0;
+}
+
+footer .content figure {
+  margin-top: 0.5rem;
+  margin-left: 0;
+}
+
+// footer image berlin
+.image.is-berlin {
+  width: 54%;
+}
+
+// hover link participation
+
+.content-participation a {
+  font-weight: bold;
+  color: white;
+}
+
+.content-participation a:hover {
+  color: white;
+}
+
+.content a {
+  color: #2f30a6;
+}
+
+.content a:hover {
+  color: #2f30a6;
+}
+
+// hover link end
+
+.inverted {
+  a {
+    background: #4445af !important;
+    padding: 0 5px 2px 5px;
+    color: white;
+    font-family: "National Regular";
+    transition: 0.125s all ease-in-out;
+    text-decoration: none;
+    &:hover {
+      background: white !important;
+      color: $primary !important;
+      transition: 0.125s all ease-in-out;
+    }
+  }
+}
+// +++ navbar fix
+.navbar {
+  background-color: white;
+  min-height: 6rem;
+  position: relative;
+  z-index: 1;
+}
+
+// .navbar > .container {
+//   display: flex;
+//   align-items: center;
+// }
+
+// .navbar-burger-toggle + .navbar-burger {
+//   margin-top: 0 !important;
+//   @include from($tablet) {
+//     display: none;
+//   }
+// }
+
+.navbar-burger {
+  color: $primary;
+  cursor: pointer;
+  display: block;
+  height: 3.25rem;
+  position: relative;
+  width: 3.25rem;
+  margin-left: auto;
+  margin-right: 0.5em;
+}
+
+.navbar-burger span {
+  background-color: currentColor;
+  display: block;
+  height: 2px;
+  left: calc(50% - 8px);
+  position: absolute;
+  transform-origin: center;
+  transition-duration: 86ms;
+  transition-property: background-color, opacity, transform;
+  transition-timing-function: ease-out;
+  width: 16px;
+}
+
+.hero {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.hero .navbar {
+  background-color: white;
+  height: 6em;
+}
+
+.hero-image-wrapper {
+  display: block;
+  position: relative;
+  margin-top: 3em;
+  height: 6em;
+}
+
+.hack-the-crisis__wrapper {
+  max-width: 150px;
+}
+
+// +++ navbar fix end
+
+.hero {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.hero .navbar {
+  background-color: white;
+  height: 6em;
+}
+
+.hero-image-overlay {
+  width: 100%;
+  bottom: auto;
+  left: auto;
+  position: relative;
+  padding: 1rem;
+
+  h1 {
+    display: none;
+  }
+
+  @include from($tablet) {
+    padding: 2rem;
+    position: absolute;
+    bottom: -200px;
+    left: 10%;
+    width: 80%;
+    background-color: white;
+
+    h1 {
+      display: block;
+    }
+  }
+
+  @include from($desktop) {
+    display: block;
+    left: 20%;
+    width: 60%;
+
+    h1 {
+      display: block;
+    }
+  }
+}
+
+#introduction {
+  margin-top: 0rem;
+  @include from($tablet) {
+    margin-top: $size-0;
+  }
+  @include primarySection;
+  // background-color: $primary;
+  // color: white;
+  // h1,
+  // h2,
+  // h3 {
+  //   color: white;
+  // }
+}
+
+.navbar-end {
+  align-items: center;
+}
+
+.navbar-item {
+  font-family: "National Extrabold";
+  color: $primary;
+  padding: 0.4rem;
+  margin-left: 15px;
+
+  &:hover {
+    background: lighten($primary, 60%) !important;
+    color: $primary !important;
+  }
+}
+
+.navbar-item.is-active {
+  background: lighten($primary, 55%) !important;
+  color: $primary !important;
+  padding: 0.35rem;
+}
+
+.navbar-burger-toggle + .navbar-burger {
+  margin-top: -4em;
+}
+
+#partners {
+  .is-partner-logos .column.is-2 {
+    flex: none;
+    width: 50%;
+    display: inline-block;
+
+    @include from($tablet) {
+      flex: none;
+      width: 16.66667%;
+    }
+  }
+}
+
+#resources {
+  background-color: #fcf7f5;
+  ul {
+    list-style: none;
+    margin-left: 0;
+
+    li::before {
+      content: "\200B"; // for Safari accessibility issue
+    }
+
+    li:not(:first-of-type) {
+      margin-top: 0.5rem;
+    }
+
+    li span:first-of-type {
+      font-family: "National Extrabold";
+    }
+
+    li span:nth-of-type(2) {
+      margin-left: 0.2rem;
+    }
+
+    li a {
+      padding: 0.2rem 0.5rem;
+      background-color: lighten($primary, 50%);
+      transition: 0.125s all ease-in-out;
+      &:hover {
+        background-color: $primary;
+        transition: 0.125s all ease-in-out;
+        color: white;
+      }
+    }
+  }
+}
+
+#faq {
+  @include primarySection;
+
+  .column.is-4 {
+    display: flex;
+  }
+}
+.shadow {
+  box-shadow: 0px 40px 40px -10px rgba($color: #000, $alpha: 0.15); /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+
+// -------- faq
+
+.content {
+  &__faq {
+    display: flex;
+    &--white {
+      padding: $size-5;
+      background-color: white;
+      color: black;
+
+      > p.is-title {
+        font-size: $size-4;
+        margin-bottom: $size-6;
+        font-family: "National Extrabold";
+        line-height: 115%;
+
+        @include from($tablet) {
+          font-size: $size-3;
+          margin-bottom: $size-5;
+        }
+      }
+
+      > p {
+        font-size: $size-4;
+      }
+    }
+  }
+}
+
+// -------- navigation
+
+div.section {
+  &#nav {
+    padding: 0 !important;
+  }
+}
+
+.language-switch {
+  & > *:first-child a,
+  & > *:last-child a {
+    padding: 0.5rem 0.75rem;
+    color: $primary;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+  & .is-active a {
+    color: $primary;
+    background-color: lighten($primary, 55%);
+  }
+}
+
+// -------- hack-the-crisis
+
+.hack-the-crisis {
+  &__wrapper {
+    max-width: 150px;
+  }
+  &__items {
+    max-width: 90px;
+    background-color: $primary;
+    color: white;
+    padding: 0.3rem;
+    line-height: 1rem;
+    margin-bottom: 0.3rem;
+  }
+  &__item {
+    color: white;
+    font-weight: 800;
+  }
+  &__subline {
+    background-color: white;
+    color: $primary;
+    font-weight: 700;
+    font-size: 0.5rem;
+  }
+}
+
+// -------- typography
+
+.title {
+  font-family: "National ExtraBold";
+  line-height: $heading-line-height;
+  color: $text;
+
+  &.is-2 {
+    font-size: $size-3;
+    @include from($desktop) {
+      font-size: $size-2;
+    }
+  }
+
+  span {
+    opacity: 0.5;
+  }
+}
+
+.title.is-1 {
+  color: $primary;
+  font-size: $size-3;
+  margin-bottom: $size-5;
+  @include from($tablet) {
+    font-size: $size-2;
+  }
+  @include from($desktop) {
+    font-size: $size-1;
+  }
+}
+
+.content {
+  p {
+    font-size: $size-5;
+    @include from($tablet) {
+      font-size: $size-5;
+    }
+
+    a {
+      padding: 0.2rem 0.5rem;
+      background-color: lighten($primary, 50%);
+      transition: 0.125s all ease-in-out;
+      &:hover {
+        background-color: $primary;
+        transition: 0.125s all ease-in-out;
+        color: white;
+      }
+    }
+  }
+}

@@ -1,0 +1,457 @@
+---
+layout: skeleton
+---
+<section class="hero is-medium" id="hero">
+  <div class="hero-head">
+    <nav class="navbar is-fixed-top">
+      <div class="container">
+        <div class="navbar-brand">
+          <a href="/" class="navbar-item">
+            <!-- <img src="/assets/img/logo.png" alt="logo"/> -->
+          </a>
+          </div>
+          <input
+          type='checkbox'
+          role='button'
+          id='navbar-burger-toggle'
+          class='navbar-burger-toggle is-hidden'
+          aria-label='menu'
+          aria-expanded='false'
+        >
+        <label for='navbar-burger-toggle' class='navbar-burger'>
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <div id="navbarMenuHeroA" class="navbar-menu">
+          <div class="navbar-end">
+            {%- comment -%} <!-- create the menu items --> {%- endcomment -%}
+            {%- for item in site.data.content -%}
+            {% assign key = item[0] %}
+            {% assign id = site.data.content[key].id %}
+            {% assign text = site.data.content[key].title[page.lang] %}
+            {%- unless site.data.content[key].id -%}
+            {%- comment -%} <!-- if there is no id we dont add it to the menu --> {%- endcomment -%}
+            {% continue %}
+            {%- endunless  -%}
+            <a class="navbar-item menu__navbar-items" id="navbar-item-{{forloop.index0}}" href="{%-if page.lang == 'en'-%}/en/#{{id}}{%-else-%}/#{{id}}{%-endif-%}">
+              {{text}}
+            </a>
+            {%- endfor -%}
+            {%- comment -%} <!--
+               add the de/en switch
+               add is-active class based on current page.lang
+             -->{%- endcomment -%}
+            <span class="navbar-item language-switch">
+               <span class="{%- if page.lang == 'en' -%}is-active{%-endif-%}"><a href="/en">EN</a></span>
+              <!--  <span>|</span> -->
+               <span class="{%- if page.lang == 'de' -%}is-active{%-endif-%}"><a href="/">DE</a></span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+  {%- comment -%} <!-- Hero content: will be in the middle --> {%- endcomment -%}
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-12">
+          <div class="hero-image-wrapper">
+            <figure class="image is-16by9">
+              <img src="/assets/img/hero.jpg" alt="Berlin" />
+            </figure>
+            <div class="hero-image-overlay shadow">
+              <h1 class="title is-1">
+                {%- for item in site.data.content["section-hero"].title[page.lang] -%}
+                  {{item}}{%- if forloop.last != true -%} <br/>{%- endif -%}
+                {%- endfor -%}
+              </h1>
+              <div class="content" >
+                {% for text in site.data.content["section-hero"].text[page.lang] %}
+                <p>{{ text | markdownify }}</p>
+                {% endfor %}
+                <p>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {%- comment -%} <!-- Hero footer: will stick at the bottom -->
+  <!-- <div class="hero-foot">
+    <nav class="tabs">
+      <div class="container">
+        <ul>
+          <li class="is-active"><a>Overview</a></li>
+          <li><a>Modifiers</a></li>
+          <li><a>Grid</a></li>
+          <li><a>Elements</a></li>
+          <li><a>Components</a></li>
+          <li><a>Layout</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div> --> {%- endcomment -%}
+</section>
+
+{%- comment -%}
+<!--
+
+Intro
+
+ --> {%- endcomment -%}
+<section class="section inverted" id="introduction">
+  <div class="container">
+    <div class="columns is-centered is-8">
+      <!-- <div class="column is-8">
+         <h2 class="title is-2">{{
+           site.data.content["section-introduction"].title[page.lang]
+           }}</h2>
+      </div> -->
+    </div>
+    <div class="columns is-centered is-8">
+      <div class="column is-4" id="sub-section-idea">
+        <h3 class="title is-3">{{site.data.content["section-introduction"]["sub-section-idea"].title[page.lang]}}</h3>
+        <div class="content">
+        {%- for text in site.data.content["section-introduction"]["sub-section-idea"].text[page.lang] -%}
+          <p>{{text | markdownify }}</p>
+        {%- endfor -%}
+         {% assign list = site.data.content["section-introduction"]["sub-section-idea"].list[page.lang] %}
+         {% include sub-section-list.html list=list %}
+        </div>
+      </div>
+      <div class="column is-4" id="sub-section-graph">
+        <h3 class="title is-3">{{site.data.content["section-introduction"]["sub-section-graph"].title[page.lang]}}</h3>
+        <div class="content">
+        {%- for text in site.data.content["section-introduction"]["sub-section-graph"].text[page.lang] -%}
+          <p>{{text | markdownify }}</p>
+        {%- endfor -%}
+        {% assign list = site.data.content["section-introduction"]["sub-section-graph"].list[page.lang] %}
+         {% include sub-section-list.html list=list %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{%- comment -%}
+
+  
+<!--
+
+Graph
+
+ -->
+ {%- endcomment -%}
+
+ <section class="section" id="submit-projects">
+   <div class="container">
+     <iframe src="/graph.html" id="myFrame" width="100%" height="50%"></iframe>
+   </div>
+ </section>
+
+{%- comment -%}
+<!--
+
+Datenquellen
+
+ -->
+ {%- endcomment -%}
+<section class="section" id="submit-projects">
+  <div class="container">
+    <div class="columns is-centered is-8">
+      <div class="column is-8">
+        <h2 class="title is-2">{{site.data.content["section-submit-projects"].title[page.lang]}}</h2>
+        <h3 class="title is-3">
+          {%- for portal in site.data.content["section-submit-projects"].portal[page.lang] -%}
+            {{portal}}</h3>
+          {%- endfor -%}
+            <p>
+            </p>
+        <div class="content">
+        {%- for text in site.data.content["section-submit-projects"].text[page.lang] -%}
+          <p>{{text}}</p>
+        {%- endfor -%}
+          <p>
+          </p>
+          <div class="buttons">
+          {%- for button in site.data.content["section-submit-projects"].buttons -%}
+            <a rel="noopener noreferrer" target="_blank" class="button is-primary" href="{{button.text.url}}">{{button.text[page.lang]}}</a>
+          {%- endfor -%}
+          </div>
+        </div>
+
+    
+        <h3 class="title is-3">
+          {%- for portal in site.data.content["section-submit-projects"].portal2[page.lang] -%}
+            {{portal}}</h3>
+          {%- endfor -%}
+            <p>
+            </p>
+        <div class="content">
+        {%- for text in site.data.content["section-submit-projects"].text2[page.lang] -%}
+          <p>{{text}}</p>
+        {%- endfor -%}
+          <p>
+          </p>
+          <div class="buttons">
+          {%- for button in site.data.content["section-submit-projects"].buttons2 -%}
+            <a rel="noopener noreferrer" target="_blank" class="button is-primary" href="{{button.text.url}}">{{button.text[page.lang]}}</a>
+          {%- endfor -%}
+          </div>
+        </div>
+
+        <h3 class="title is-3">
+          {%- for portal in site.data.content["section-submit-projects"].portal3[page.lang] -%}
+            {{portal}}</h3>
+          {%- endfor -%}
+            <p>
+            </p>
+        <div class="content">
+        {%- for text in site.data.content["section-submit-projects"].text3[page.lang] -%}
+          <p>{{text}}</p>
+        {%- endfor -%}
+          <p>
+          </p>
+          <div class="buttons">
+          {%- for button in site.data.content["section-submit-projects"].buttons3 -%}
+            <a rel="noopener noreferrer" target="_blank" class="button is-primary" href="{{button.text.url}}">{{button.text[page.lang]}}</a>
+          {%- endfor -%}
+          </div>
+        </div>
+
+        <h3 class="title is-3">
+          {%- for portal in site.data.content["section-submit-projects"].portal4[page.lang] -%}
+            {{portal}}</h3>
+          {%- endfor -%}
+            <p>
+            </p>
+        <div class="content">
+        {%- for text in site.data.content["section-submit-projects"].text4[page.lang] -%}
+          <p>{{text}}</p>
+        {%- endfor -%}
+          <p>
+          </p>
+          <div class="buttons">
+          {%- for button in site.data.content["section-submit-projects"].buttons4 -%}
+            <a rel="noopener noreferrer" target="_blank" class="button is-primary" href="{{button.text.url}}">{{button.text[page.lang]}}</a>
+          {%- endfor -%}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{%- comment -%}
+<!--
+
+Prototyp
+
+ -->
+  {%- endcomment -%}
+ <section class="section" id="resources">
+  <div class="container">
+    <div class="columns is-centered is-8">
+      <div class="column is-8">
+        <h2 class="title is-2">{{site.data.content["section-prototyp"].title[page.lang]}}</h2>
+        <div class="content">
+        {%- for text in site.data.content["section-prototyp"].text[page.lang] -%}
+          <p>{{text}}</p>
+        {%- endfor -%}
+        <img src="/assets/img/masterportal.png">
+          <p>
+          </p>
+          <div class="buttons">
+          {%- for button in site.data.content["section-prototyp"].buttons -%}
+            <a rel="noopener noreferrer" target="_blank" class="button is-primary" href="{{button.text.url}}">{{button.text[page.lang]}}</a>
+          {%- endfor -%}
+          </div> 
+        </div>
+      </div>
+    </div>
+   </div>
+ </section>
+
+
+{%- comment -%}
+<!--
+  █ ▄▄  ██   █▄▄▄▄    ▄▄▄▄▀ ▄   ▄███▄   █▄▄▄▄
+  █   █ █ █  █  ▄▀ ▀▀▀ █     █  █▀   ▀  █  ▄▀
+  █▀▀▀  █▄▄█ █▀▀▌      █ ██   █ ██▄▄    █▀▀▌
+  █     █  █ █  █     █  █ █  █ █▄   ▄▀ █  █
+   █       █   █     ▀   █  █ █ ▀███▀     █
+    ▀     █   ▀          █   ██          ▀
+         ▀
+ -->
+ {%- endcomment -%}
+
+
+ <!-- <section class="section" id="partners">
+  <div class="container">
+
+    <div class="columns is-centered is-8">
+      <div class="column is-8">
+        <h2 class="title is-2">{{site.data.content["section-partners"].title[page.lang]}}</h2>
+      </div>
+    </div>
+
+    <div class="columns is-centered is-8">
+      <div class="column is-8">
+        <div class="content">
+          {%- for text in site.data.content["section-partners"].text[page.lang] -%}
+          <p>{{text}}</p>
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+
+    {%- for partner in site.data.content["section-partners"].partners -%}
+
+    {% assign counter = forloop.index0 | modulo : 4 %}
+  {%- if counter == 0  -%}
+      <div class="columns is-centered is-8 is-partner-logos">
+  {%- endif -%}
+        <div class="column is-2">
+          <div>
+            <figure class="image is-1by1">
+              <a href="{{partner.link}}" target="_blank">
+               <img src="{{partner.image}}" alt="logo {{partner.name}}">
+              </a>
+            </figure>
+          </div>
+          {%- comment -%}
+           <div>
+            <p>{{partner.name}}</p>
+          </div> 
+          {%- endcomment -%}
+        </div>
+{%- if counter == 3 or forloop.last == true  -%}
+      </div>
+  {%- endif -%}
+
+    {%- endfor -%}
+  </div>
+</section> --> 
+
+{%- comment -%}
+<!--
+
+  ▄████  ██   ▄▄ █
+  █▀   ▀ █ █ █   █
+  █▀▀    █▄▄█ ▀▀▀█
+  █      █  █    █
+   █        █     █
+    ▀      █       ▀
+          ▀
+ -->
+ {%- endcomment -%}
+
+ <!-- <section class="section" id="faq">
+   <div class="container">
+     <div class="columns is-centered is-8">
+       <div class="column is-8">
+         <h2 class="title is-2">{{site.data.content["section-faq"].title[page.lang]}}</h2>
+       </div>
+     </div>
+     {%- for question in site.data.content["section-faq"].questions -%}
+     {% assign counter = forloop.index0 | modulo : 2 %}
+     {%- if counter == 0 -%}
+     <div class="columns is-centered is-8">
+     {%- endif -%}
+     <div class="column is-4 is-flex">
+      <div class="content content__faq--white shadow">
+        <p class="is-title has-text-weight-bold">
+          {{question.title[page.lang]}}
+        </p>
+        {%- for text in question.text[page.lang] -%}
+          <p>{{text}}</p>
+        {%- endfor -%}
+      </div>
+    </div>
+     {%- if counter == 1 or forloop.last == true -%}
+     </div>
+     {%- endif -%}
+     {%- endfor -%}
+ </section> -->
+
+{%- comment -%}
+<!--
+
+Footer
+
+ -->
+  {%- endcomment -%}
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column">
+      </div>
+      {%- comment -%}
+      <!-- div class="column">
+        <div class="content">
+          <p class="footer__tagline--size">
+          {{site.data.content.meta.footer.tagline[page.lang]}}
+          </p>
+      </div>
+    </div -->
+    {%- endcomment -%}
+    <div class="column">
+      <div class="content">
+        <p>
+          {{site.data.content.meta.footer.byline[page.lang]}}
+        </p>
+        <a href="{%- if page.lang == 'de' -%}https://www.technologiestiftung-berlin.de{%- else -%}https://www.technologiestiftung-berlin.de/en/home/{%- endif -%}">
+          <figure class="image is-128x128">
+            <img src="/assets/img/tsb.svg" alt="logo" class="">
+          </figure>
+        </a>
+      </div>
+    </div>
+    <!-- <div class="column">
+      <div class="content">
+        <p>
+          {{site.data.content.meta.footer.executeedline[page.lang]}}
+        </p>
+        <a href="{%- if page.lang == 'de' -%}https://www.citylab-berlin.org/{%- else -%}https://www.citylab-berlin.org/index_en{%- endif -%}">
+          <figure class="image is-128x128">
+            <img src="/assets/img/citylab-logo.svg" alt="logo" class="">
+          </figure>
+        </a>
+      </div>
+    </div> -->
+      <div class="column">
+        <div class="content">
+          <p>
+            {{site.data.content.meta.footer.supportline[page.lang]}}
+          </p>
+          <a href="{%- if page.lang == 'de' -%}https://www.be.berlin/{%- else -%}https://www.be.berlin/?L=1{%- endif -%}">
+            <figure class="image is-berlin">
+              <img src="/assets/img/berlin_logo_neu.svg" alt="logo" class="">
+            </figure>
+          </a>
+        </div>
+    </div>
+    </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content">
+          <p>
+            {%- if page.lang == 'de' -%}
+            <a href="https://www.technologiestiftung-berlin.de/de/impressum/">Impressum</a>
+              {%- else -%}
+              <a href="https://www.technologiestiftung-berlin.de/en/imprint/">Legal Note</a>
+            {%- endif -%}
+          </p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</footer>
